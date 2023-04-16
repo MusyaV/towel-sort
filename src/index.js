@@ -2,7 +2,10 @@
 
 module.exports = function towelSort(matrix) {
     let res = [];
-    for (let i = 0; i < matrix.length; i++) {
+    if (matrix == null) {
+        return [];
+    }else{
+        for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
             let columnInd =
                 i % 2 === 0
@@ -14,4 +17,6 @@ module.exports = function towelSort(matrix) {
         }
     }
     return Array.from(res);
+    }
+    
 };
